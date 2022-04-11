@@ -3,7 +3,7 @@ package com.ly.leetcode.code.tree;
 import com.ly.leetcode.common.TreeNode;
 
 /**
- * 543
+ * 543. 二叉树的直径
  * @url https://leetcode-cn.com/problems/diameter-of-binary-tree/
  * 核心思路：首先单独分析一个节点(TreeNode) 要求当前节点的最大直径，它要做什么事情？
  * 它的最大深度 = 左节点的最大深度 + 右节点的最大深度 + 1(自身节点深度)
@@ -13,6 +13,12 @@ import com.ly.leetcode.common.TreeNode;
  */
 public class DiameterofBinaryTree {
     int ans;
+
+    /**
+     * 解法1
+     * @param root
+     * @return
+     */
     public int diameterOfBinaryTree(TreeNode root) {
         ans = 1;
         getDepth(root);
